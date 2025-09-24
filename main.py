@@ -47,7 +47,7 @@ driver = uc.Chrome(options=options)
 
 def extraire_offres(limit=10):
     offres_totales = []
-    date_scraping = datetime.datetime.now().strftime("%Y-%m-%d")
+    date_scraping = datetime.now().strftime("%Y-%m-%d")
     start = 1
 
     try:
@@ -221,7 +221,7 @@ for i, job_url in enumerate(job_urls):
     if about_you_description:
         description += "\n\n" + about_you_description
         
-    date_scraping = datetime.datetime.now().strftime("%Y-%m-%d")
+    date_scraping = datetime.now().strftime("%Y-%m-%d")
 
     tags = date_debut
 
