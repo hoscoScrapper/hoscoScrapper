@@ -55,7 +55,7 @@ def extraire_offres(limit=10):
             url = f"{url_base}&page={start}"
             print(f"Scraping page {start} from URL: {url}")
             driver.get(url)
-            sleep(random.uniform(3, 4))  # Pause pour laisser la page se charger
+            sleep(random.uniform(6, 10))  # Pause pour laisser la page se charger
 
             offres = driver.find_elements(By.CSS_SELECTOR, '[data-cy="job-tile"] h2 a')
 
@@ -96,7 +96,7 @@ def extraire_offres(limit=10):
             # Passer à la page suivante seulement si le nombre d'offres sur cette page est supérieur à zéro
             if len(offres_totales) < limit:
                 start += 1
-                sleep(random.uniform(1, 2))  # Pause entre les pages
+                sleep(random.uniform(3, 5))  # Pause entre les pages
 
     finally:
         driver.quit()
