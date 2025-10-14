@@ -154,7 +154,7 @@ def restart_driver():
     print(f"[INFO] Restarting driver after waiting {wait_time:.2f} seconds...")
     time.sleep(wait_time)
     # Reinitialize the driver (adjust options as you had them before)
-    driver = webdriver.Chrome()  
+    driver = webdriver.Chrome(options=options)  
     print("[INFO] New driver started.")
     return driver
     
