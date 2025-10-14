@@ -51,7 +51,7 @@ def extraire_offres(start_page=1, max_pages=4, limit=40):
     try:
         # ⚡ create driver once per batch
         options = uc.ChromeOptions()
-        #options.add_argument('--headless=new')
+        options.add_argument('--headless=new')
         options.add_argument("--disable-gpu")
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
